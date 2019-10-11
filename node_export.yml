@@ -1,0 +1,8 @@
+- name: Installing node export 
+  hosts: node
+  sudo: yes
+  roles:
+    - role: ansible-prometheus
+      prometheus_install: false
+      prometheus_alert_manager_install: false
+      prometheus_collector__ntp__server: 10.200.22.87
