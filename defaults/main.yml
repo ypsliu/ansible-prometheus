@@ -2,11 +2,13 @@
 # defaults file for ansible-prometheus
 
 prometheus_install: true
-prometheus_node_exporter_install: true
+prometheus_node_exporter_install: false
 prometheus_alert_manager_install: true
 prometheus_push_gateway_install: false
 prometheus_snmp_exporter_install: false
 prometheus_blackbox_exporter_install: false
+prometheus_redis_exporter_install: false
+
 
 prometheus_owner: 'prometheus'
 prometheus_group: 'prometheus'
@@ -41,6 +43,9 @@ prometheus_snmp_exporter_version: '0.15.0'
 
 # Blackbox exporter
 prometheus_blackbox_exporter_version: '0.14.0'
+
+# Redis export
+prometheus_redis_exporter_version: '1.3.1'
 
 # Prometheus
 # https://prometheus.io/docs/operating/configuration/
