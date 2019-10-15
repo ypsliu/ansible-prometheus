@@ -1,0 +1,16 @@
+Type=simple
+User=prometheus
+Group=prometheus
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart={{ prometheus_install_dir }}/{{ prometheus_redis_exporter_archive }}/redis_exporter \
+  --log-format=txt \
+  --namespace=redis \
+  --web.listen-address=:9121 \
+  --redis.addr= {{ redis_addr }}
+  --web.telemetry-path=/metrics
+
+#SyslogIdentifier=redis_exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
