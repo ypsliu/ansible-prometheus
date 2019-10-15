@@ -1,0 +1,10 @@
+############################################################
+# Auto generated
+############################################################
+prometheus_redis_exporter_service_config:
+  - ['namespace', "redis"]
+  - ['web.listen-address', ":9121"]
+  - ['redis.addr', "redis://localhost:7001,redis://localhost:7002,redis://localhost:7003"]
+  - ['web.telemetry-path', "/metrics"]
+  - ['log.level', "{{ prometheus_collector__log__level }}"]
+  - ['log.format', "txt"]
