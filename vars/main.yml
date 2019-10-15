@@ -17,3 +17,6 @@ prometheus_snmp_exporter_tarball_url: "https://github.com/prometheus/snmp_export
 
 prometheus_blackbox_exporter_archive: "blackbox_exporter-{{ prometheus_blackbox_exporter_version }}.{{ prometheus_platform_architecture }}"
 prometheus_blackbox_exporter_tarball_url: "https://github.com/prometheus/blackbox_exporter/releases/download/v{{ prometheus_blackbox_exporter_version }}/{{ prometheus_blackbox_exporter_archive }}.tar.gz"
+
+prometheus_redis_exporter_archive: "redis_exporter-v{{ prometheus_redis_exporter_version }}.{{ prometheus_platform_architecture }}"
+prometheus_redis_exporter_tarball_url: "https://github.com/oliver006/redis_exporter/releases/download/v{{ prometheus_redis_exporter_version }}/{{ prometheus_redis_exporter_archive }}.tar.gz"
